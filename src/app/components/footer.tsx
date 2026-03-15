@@ -1,6 +1,6 @@
-import { motion } from 'motion/react';
-import { Instagram, Facebook, Linkedin, Mail, Phone, MapPin } from 'lucide-react';
-import logo from 'figma:asset/d06553d0d69cccf08026fc5accd3aaf547b1d800.png';
+import { motion } from "framer-motion";
+import { Instagram, Facebook, Linkedin, Mail, Phone, MapPin } from "lucide-react";
+import logo from '../../assets/logo.png';
 
 const quickLinks = [
   { name: 'Home', href: '#home' },
@@ -47,11 +47,11 @@ export function Footer() {
           {/* Company Info */}
           <div>
             <motion.img
-              whileHover={{ scale: 1.05 }}
-              src={logo}
-              alt="RADEV Realty Group"
-              className="h-16 mb-6"
-            />
+  whileHover={{ scale: 1.05 }}
+  src={logo}
+  alt="RADEV Realty Group"
+  className="h-16 mb-6"
+/>
             <p className="text-white/60 text-sm leading-relaxed mb-6">
               Building landmarks and creating legacies in Hyderabad with premium construction 
               and development solutions.
