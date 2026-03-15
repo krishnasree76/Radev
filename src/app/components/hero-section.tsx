@@ -1,6 +1,6 @@
 import { motion } from 'motion/react';
 import { Building2, ArrowRight } from 'lucide-react';
-import logo from 'figma:asset/d06553d0d69cccf08026fc5accd3aaf547b1d800.png';
+import logo from '../../assets/logo.png';
 
 interface HeroSectionProps {
   scrollToSection: (href: string) => void;
@@ -57,10 +57,10 @@ export function HeroSection({ scrollToSection }: HeroSectionProps) {
           className="mb-12"
         >
           <img
-            src={logo}
-            alt="RADEV Realty Group"
-            className="mx-auto h-32 md:h-48 lg:h-64 drop-shadow-2xl"
-          />
+  src={logo}
+  alt="RADEV Realty Group"
+  className="mx-auto h-32 md:h-48 lg:h-64 drop-shadow-2xl"
+/>
         </motion.div>
 
         {/* Heading */}
