@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react';
-import { motion } from 'motion/react';
+import { motion } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
-import logo from 'figma:asset/d06553d0d69cccf08026fc5accd3aaf547b1d800.png';
+import logo from '../../assets/logo.png';
+
 
 const navLinks = [
   { name: 'Home', href: '#home' },
@@ -49,13 +50,13 @@ export function Navbar() {
             whileHover={{ scale: 1.05 }}
             className="flex items-center"
           >
-            <img
-              src={logo}
-              alt="RADEV Realty Group"
-              className={`transition-all duration-300 ${
-                isScrolled ? 'h-12' : 'h-16'
-              }`}
-            />
+           <img
+  src={logo}
+  alt="RADEV Realty Group"
+  className={`transition-all duration-300 ${
+    isScrolled ? 'h-12' : 'h-16'
+  }`}
+/>
           </motion.button>
 
           {/* Desktop Navigation */}
