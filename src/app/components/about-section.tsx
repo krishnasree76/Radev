@@ -1,5 +1,4 @@
-import { motion } from 'motion/react';
-import { useInView } from 'motion/react';
+import { motion, useInView } from "framer-motion";
 import { useRef } from 'react';
 import { Award, Users, Building, TrendingUp } from 'lucide-react';
 
@@ -102,14 +101,14 @@ export function AboutSection() {
               
               {/* Floating badge */}
               <motion.div
-                initial={{ scale: 0 }}
-                animate={isInView ? { scale: 1 } : {}}
-                transition={{ delay: 1, type: 'spring' }}
-                className="absolute -bottom-6 -right-6 bg-[#C9A24A] text-[#0F0F0F] p-6 rounded-2xl shadow-xl"
-              >
-                <div className="text-3xl font-bold">15+</div>
-                <div className="text-sm">Years of Excellence</div>
-              </motion.div>
+  initial={{ scale: 0 }}
+  animate={isInView ? { scale: 1 } : {}}
+  transition={{ delay: 1, type: "spring" }}
+  className="absolute bottom-4 right-4 md:bottom-6 md:right-6 bg-[#C9A24A] text-[#0F0F0F] p-4 md:p-6 rounded-xl md:rounded-2xl shadow-xl z-20"
+>
+  <div className="text-2xl md:text-3xl font-bold">15+</div>
+  <div className="text-xs md:text-sm">Years of Excellence</div>
+</motion.div>
             </div>
 
             {/* Background decoration */}
