@@ -46,8 +46,8 @@ const businessHours = [
 
 const socialMedia = [
   { icon: Instagram, name: 'Instagram', handle: '@radevrealtygroup', href: 'https://instagram.com/radevrealtygroup' },
-  { icon: Facebook, name: 'Facebook', handle: 'RADEV Realty Group', href: '#' },
-  { icon: Linkedin, name: 'LinkedIn', handle: 'RADEV Realty Group', href: '#' },
+  // { icon: Facebook, name: 'Facebook', handle: 'RADEV Realty Group', href: '#' },
+  // { icon: Linkedin, name: 'LinkedIn', handle: 'RADEV Realty Group', href: '#' },
 ];
 
 export function ContactSection() {
@@ -64,16 +64,22 @@ export function ContactSection() {
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    
-    alert('Thank you for your message! We will get back to you soon.');
-    setFormData({ name: '', email: '', phone: '', message: '' });
-    setIsSubmitting(false);
-  };
+  e.preventDefault();
+
+  const { name, email, phone, message } = formData;
+
+  const whatsappMessage = `Hello, I am ${name}%0A
+Email: ${email}%0A
+Phone: ${phone}%0A
+Message: ${message}`;
+
+  const whatsappURL = `https://wa.me/919392296636?text=${whatsappMessage}`;
+
+  window.open(whatsappURL, "_blank");
+
+  // Reset form
+  setFormData({ name: "", email: "", phone: "", message: "" });
+};
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData(prev => ({
