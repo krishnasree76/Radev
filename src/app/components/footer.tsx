@@ -21,8 +21,8 @@ const services = [
 
 const socialLinks = [
   { icon: Instagram, href: 'https://instagram.com/radevrealtygroup', label: 'Instagram' },
-  { icon: Facebook, href: '#', label: 'Facebook' },
-  { icon: Linkedin, href: '#', label: 'LinkedIn' },
+  // { icon: Facebook, href: '#', label: 'Facebook' },
+  // { icon: Linkedin, href: '#', label: 'LinkedIn' },
 ];
 
 export function Footer() {
@@ -147,12 +147,12 @@ export function Footer() {
               © {new Date().getFullYear()} RADEV Realty Group Private Limited. All rights reserved.
             </p>
             <div className="flex gap-6 text-sm">
-              <button className="text-white/60 hover:text-[#C9A24A] transition-colors">
+              {/* <button className="text-white/60 hover:text-[#C9A24A] transition-colors">
                 Privacy Policy
               </button>
               <button className="text-white/60 hover:text-[#C9A24A] transition-colors">
                 Terms of Service
-              </button>
+              </button> */}
             </div>
           </div>
         </div>
