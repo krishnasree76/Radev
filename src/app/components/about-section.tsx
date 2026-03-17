@@ -3,7 +3,7 @@ import { useRef } from 'react';
 import { Award, Users, Building, TrendingUp } from 'lucide-react';
 
 const stats = [
-  { icon: Building, value: '50+', label: 'Projects Completed' },
+  { icon: Building, value: '12+', label: 'Projects Completed' },
   { icon: Users, value: '500+', label: 'Happy Clients' },
   { icon: Award, value: '15+', label: 'Years Experience' },
   { icon: TrendingUp, value: '100%', label: 'Client Satisfaction' },
