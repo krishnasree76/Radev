@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Instagram, Facebook, Linkedin, Mail, Phone, MapPin } from "lucide-react";
+import { Instagram, Facebook, Linkedin, Mail, Phone, MapPin,Heart } from "lucide-react";
 import logo from '../../assets/logo.png';
 
 const quickLinks = [
@@ -146,6 +146,22 @@ export function Footer() {
             <p className="text-white/60 text-sm text-center md:text-left">
               © {new Date().getFullYear()} RADEV Realty Group Private Limited. All rights reserved.
             </p>
+            <div className="flex justify-center items-center gap-1">
+            Made with <Heart className="inline h-4 w-4 text-red-500 mx-1" /> by
+            <a
+              href="https://staffarc.in"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-1 text-orange-600 hover:underline"
+            >
+              <img
+                src="https://www.staffarc.in/images/Staffarc-logo.png"
+                alt="StaffArc logo"
+                className="h-5 w-5 object-contain"
+              />
+              StaffArc
+            </a>
+          </div>
             <div className="flex gap-6 text-sm">
               {/* <button className="text-white/60 hover:text-[#C9A24A] transition-colors">
                 Privacy Policy
